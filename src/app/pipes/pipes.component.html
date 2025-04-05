@@ -1,0 +1,17 @@
+<h3>Learning Angular Pipes: {{ text | uppercase }}</h3>
+<h3>I bought this one around the price: {{ price | currency: 'USD' }}</h3>
+<h3>Date: {{ purchasedOn | date: 'fullDate' | uppercase }}</h3>
+<h3>Purchased on: {{ purchasedOn | date: 'yyyy/MM/dd HH:mm:ss' }}</h3>
+
+<h3>Discount: {{ discount | percent: '1.0-3' }}</h3>
+<p>{{ 'angular pipes are fun' | uppercase | titlecase }}</p>
+<p>{{ 'PraCtice it' | camelcase | slice: 0:5 }}</p>
+
+<h3>{{ users | json }}</h3>
+
+<p>{{ name1 + ' ' + name2 | lowercase }}</p>
+
+<!-- Pipes Operator Precedence -->
+<p>{{ (isAdmin ? 'Access Granted' : 'Access Denied') | lowercase }}</p>
+
+<p>{{ (price * quantity) > 1000 ? (discountedPrice | currency) : (price * quantity | currency) }}</p>
