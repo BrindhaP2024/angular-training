@@ -1,10 +1,43 @@
 import { Component } from '@angular/core';
-import { CurrencyPipe, DatePipe, PercentPipe, JsonPipe, UpperCasePipe, LowerCasePipe, TitleCasePipe, SlicePipe } from '@angular/common';
+import {
+  CurrencyPipe,
+  DatePipe,
+  PercentPipe,
+  JsonPipe,
+  UpperCasePipe,
+  LowerCasePipe,
+  TitleCasePipe,
+  SlicePipe,
+  DecimalPipe,
+  I18nPluralPipe,
+  I18nSelectPipe,
+  KeyValuePipe,
+  AsyncPipe,
+  CommonModule,
+  NgFor
+} from '@angular/common';
 import { CamelcasePipe } from './camelcase.pipe';
+import { Observable, of } from 'rxjs';
+
 @Component({
   selector: 'app-pipes',
   standalone: true,
-  imports: [UpperCasePipe, CurrencyPipe, DatePipe, PercentPipe, JsonPipe, LowerCasePipe,TitleCasePipe,SlicePipe,CamelcasePipe],
+  imports: [
+    UpperCasePipe,
+    CurrencyPipe,
+    DatePipe,
+    PercentPipe,
+    JsonPipe,
+    LowerCasePipe,
+    TitleCasePipe,
+    SlicePipe,
+    DecimalPipe,
+    I18nPluralPipe,
+    I18nSelectPipe,
+    KeyValuePipe,
+    CamelcasePipe,
+    NgFor
+  ],
   templateUrl: './pipes.component.html',
   styleUrls: ['./pipes.component.css']
 })
@@ -27,4 +60,29 @@ export class PipesComponent {
   isAdmin = true;
   quantity: number = 3;
   discountedPrice: number = 1200;
+
+
+  // I18nPluralPipe Example
+  items = ['apple', 'banana', 'cherry'];
+  itemsMap = {
+    '=0': 'No items',
+    '=1': 'One item',
+    '=2': 'Two items',
+    'other': '# items'
+  };
+
+  // I18nSelectPipe
+  userRole = 'admin';
+  roleMap = {
+    'admin': 'Administrator',
+    'user': 'Standard User',
+    'guest': 'Guest User'
+  };
+
+  // KeyValuePipe Example
+  userDetails = {
+    name: 'John Doe',
+    email: 'john@example.com',
+    age: 30
+  };
 }
