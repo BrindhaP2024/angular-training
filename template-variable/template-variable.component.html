@@ -1,0 +1,12 @@
+@for (item of items; track item.id) {
+  @let idx = $index;
+  @let isFirst = $first;
+
+  <li>
+    <p>Item #{{ idx }}: {{ item.name }} ({{ isFirst ? 'first' : 'last' }})</p>
+    <span>{{ item.description }}</span>
+  </li>
+} @empty {
+  <li>No items available.</li>
+}
+

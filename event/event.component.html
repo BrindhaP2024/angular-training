@@ -1,0 +1,27 @@
+<div>
+  <h2>{{ message }}</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="name"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+    (keyup)="onKeyUp()"
+    placeholder="Enter your name"
+    style="padding: 10px; margin-bottom: 10px;"
+  />
+
+  <input
+    (keydown)="onEnter($event)"
+    placeholder="Press Ctrl key"
+    style="padding: 10px; margin-bottom: 10px;"
+  />
+
+  <button
+    (click)="onSubmit()"
+    (mouseover)="message = 'Hover over the submit button!'"
+    style="padding: 10px 20px;"
+  >
+    Submit
+  </button>
+</div>

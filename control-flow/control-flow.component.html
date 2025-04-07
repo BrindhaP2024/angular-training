@@ -1,0 +1,31 @@
+<div class="product-list">
+  <div *ngIf="products.length > 0 else noProducts">
+    <div *ngFor="let product of products; trackBy: trackById">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+
+      <p *ngIf="product.inStock; else outOfStock" class="in-stock">In Stock</p>
+      <ng-template #outOfStock>
+        <p class="out-of-stock">Out of Stock</p>
+      </ng-template>
+    </div>
+  </div>
+
+  <ng-template #noProducts>
+    <p>No products available.</p>
+  </ng-template>
+</div>
+
+<div class="product-list">
+  <div *ngFor="let product of products; trackBy: trackById">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+
+    <div [ngSwitch]="product.category">
+      <p *ngSwitchCase="'electronics'" class="category">Category: Electronics</p>
+      <p *ngSwitchCase="'clothing'" class="category">Category: Clothing</p>
+      <p *ngSwitchCase="'furniture'" class="category">Category: Furniture</p>
+      <p *ngSwitchDefault class="category">Category: Other</p>
+    </div>
+  </div>
+</div>

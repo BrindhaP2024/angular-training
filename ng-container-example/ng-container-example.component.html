@@ -1,0 +1,16 @@
+<p>ng-container-example works!</p>
+<h1>Welcome to Angular!</h1>
+
+<ng-container *ngIf="isLoggedIn; else loggedOut">
+  <p>Hello, {{ username }}! You are logged in.</p>
+</ng-container>
+
+<ng-template #loggedOut>
+  <p>Please log in to continue.</p>
+</ng-template>
+
+<ul>
+  <ng-container *ngFor="let item of ['Apple', 'samsung', 'One plus']">
+    <li>{{ item }}</li>
+  </ng-container>
+</ul>

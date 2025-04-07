@@ -1,0 +1,61 @@
+<div>
+  @if (user.isLoggedIn) {
+    <p>Welcome back, {{ user.name }}!</p>
+  } @else if (user.isGuest) {
+    <p>Welcome, Guest! Please log in.</p>
+  } @else {
+    <p>Welcome! Please sign up or log in.</p>
+  }
+</div>
+
+<section>
+  <ul>
+    @for (item of items; track item.name;) {
+      <li>{{ item.name }} - {{ item.description }}</li>
+    } @empty {
+      <li>No items available.</li>
+    }
+  </ul>
+</section>
+
+<section>
+  <ul>
+    @for (item of items; track item.id; let idx = $index, e = $even) {
+      @if (e) {
+        <p>Even item #{{ idx }}: {{ item.name }}</p>
+        <li>{{ item.name }} - {{ item.description }}</li>
+      }
+    } @empty {
+      <li>No items available.</li>
+    }
+  </ul>
+</section>
+<section>
+  @for (item of items; track item.id; let idx = $index, e = $first) {
+    @if (e) {
+      <p>
+        Item #{{ idx }}: {{ item.name }} - {{ item.description }}
+      </p>
+    }
+  } @empty {
+    <li>No items available.</li>
+  }
+</section>
+
+<main>
+  @switch (user.role) {
+    @case ('admin') {
+      <h1>Admin Dashboard</h1>
+      <p>Manage users, settings, and more.</p>
+    }
+    @case ('editor') {
+      <h1>Editor Dashboard</h1>
+    }
+    @case ('viewer') {
+      <h1>Viewer Dashboard</h1>
+    }
+    @default {
+      <h1>Just default, {{ user.name }}!</h1>
+    }
+  }
+</main>

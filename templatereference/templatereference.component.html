@@ -1,0 +1,21 @@
+
+
+<div>
+  <button (click)="showTemplate('greeting')">Show Greeting</button>
+  <button (click)="showTemplate('farewell')">Show Farewell</button>
+  <ng-container #vcr></ng-container>
+</div>
+
+<div>
+  <button (click)="showFirst()">Show first template</button>
+  <button (click)="showSecond()">Show Farewell</button>
+  <ng-container *ngTemplateOutlet="currentTemplate"></ng-container>
+</div>
+
+<ng-template #greeting>
+  <p>Welcome template!</p>
+</ng-template>
+
+<ng-template #farewell>
+  <p>Closing template!</p>
+</ng-template>

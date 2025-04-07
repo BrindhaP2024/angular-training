@@ -1,0 +1,22 @@
+<h2>Two-way Binding with Form Controls</h2>
+<form>
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="name" name="name" placeholder="Enter your name" />
+
+  <label>Email:</label>
+  <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email" />
+
+  <p>Your Name: {{ name }}</p>
+  <p>Your Email: {{ email }}</p>
+</form>
+
+<main>
+  <h1>update data: {{ initialCount }}</h1>
+  <app-data-binding [(data)]="initialCount"></app-data-binding>
+</main>
+
+<div>
+  <span *ngFor="let star of stars" (click)="setRating(star)">
+    {{ star <= rating() ? '★' : '☆' }}
+  </span>
+</div>
