@@ -9,11 +9,11 @@ export class CamelcasePipe implements PipeTransform {
 
     return value
       .split(' ')
-      .map((word, index) => {
-        if (index === 0) {
-          return word.toLowerCase();
+      .map((a, b) => {
+        if (b === 0) {
+          return a.toLowerCase();
         }
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        return a.charAt(0).toUpperCase() + a.slice(1).toLowerCase();
       })
       .join('');
   }

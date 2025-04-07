@@ -1,8 +1,57 @@
-<h2>Routing</h2>
-<nav>
-  <a routerLink = "/one">First route</a>
-  <a routerLink ="/two" routerLinkActive="active">Second route</a>
 
+<h2>Routing Example</h2>
+<nav>
+  <a routerLink="/one" routerLinkActive="active">First route</a><br>
+  <a routerLink="/two" routerLinkActive="active">Second</a>
+  <a routerLink="/pipes" routerLinkActive="active">Pipes</a>
+  <a routerLink="/guards-example" routerLinkActive="active">Guards</a>
+  <a routerLink="/data-binding" routerLinkActive="active">Data-Binding</a>
+  <a routerLink="/event">Event</a>
+  <a routerLink="/two-way-binding">Two way binding</a>
+  <a routerLink="/adv-control-flow">Adv control flow</a>
+  <a routerLink="/template-ref">Template refs</a>
+  <a routerLink="/ng-container">Container</a>
 </nav>
-<app-pipes></app-pipes>
-<router-outlet/>
+<router-outlet></router-outlet>
+
+<hr>
+
+<app-ng-content>
+  <h2 header>Custom Header sets here</h2>
+  <p body>Body content passed via ng-content</p>
+</app-ng-content>
+
+<hr>
+
+<h3>Check for ratings: {{ userRating }}</h3>
+<app-two-way-binding [(rating)]="userRating"></app-two-way-binding>
+
+<h3>Pipe Output: {{ 4 | multiply: 2 }}</h3>
+
+<hr>
+
+<h3>Whitespace Preservation</h3>
+<p>First</p>
+<p>Second</p>
+<span>Hello</span> <span>World</span>
+<p>This       is     collapsed   whitespace.</p>
+
+<hr>
+
+<button (click)="toggleHomeComponent()">Toggle Home Component</button>
+
+@defer {
+  <app-home />
+} @placeholder {
+  <div>
+    <h3>Loading Home Component...</h3>
+    <p>Please wait.</p>
+  </div>
+} @error {
+  <div>
+    <h3>Oops! Failed to load Home Component.</h3>
+  </div>
+}
+
+
+<app-template-variable></app-template-variable>

@@ -5,7 +5,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   selector: 'app-one',
   imports: [RouterOutlet,RouterLink,RouterLinkActive],
   templateUrl: './one.component.html',
-  styleUrl: './one.component.css'
+  styleUrl:
+  './one.component.css'
 })
 export class OneComponent {
 

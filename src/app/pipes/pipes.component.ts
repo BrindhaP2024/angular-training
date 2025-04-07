@@ -1,29 +1,18 @@
 import { Component } from '@angular/core';
-import {
-  CurrencyPipe,
-  DatePipe,
-  PercentPipe,
-  JsonPipe,
-  UpperCasePipe,
-  LowerCasePipe,
-  TitleCasePipe,
-  SlicePipe,
-  DecimalPipe,
-  I18nPluralPipe,
-  I18nSelectPipe,
-  KeyValuePipe,
-  AsyncPipe,
-  CommonModule,
-  NgFor
+import {CurrencyPipe,DatePipe,PercentPipe,JsonPipe,UpperCasePipe,LowerCasePipe,
+  TitleCasePipe,SlicePipe,DecimalPipe,I18nPluralPipe,I18nSelectPipe,KeyValuePipe,
+  CommonModule
 } from '@angular/common';
+
 import { CamelcasePipe } from './camelcase.pipe';
-import { Observable, of } from 'rxjs';
+import { PhoneMaskPipe } from "./phone.pipe";
+import { delay, Observable, of } from 'rxjs';
+
 
 @Component({
   selector: 'app-pipes',
   standalone: true,
-  imports: [
-    UpperCasePipe,
+  imports: [UpperCasePipe,
     CurrencyPipe,
     DatePipe,
     PercentPipe,
@@ -36,15 +25,17 @@ import { Observable, of } from 'rxjs';
     I18nSelectPipe,
     KeyValuePipe,
     CamelcasePipe,
-    NgFor
-  ],
+    CommonModule, PhoneMaskPipe],
   templateUrl: './pipes.component.html',
   styleUrls: ['./pipes.component.css']
 })
 export class PipesComponent {
+
+  usersObs: Observable<string[]> = of(['HTML', 'CSS', 'JS','ANGULAR','NODE JS','EXPRESS JS']).pipe(delay(1000));
+
   text = 'Pipes Example';
   price = 140.0545;
-  purchasedOn = new Date('2025-01-29');
+  purchasedOn = new Date('2025-04-4');
   name1 = 'Aspire';
   name2 = 'Systems';
 
@@ -62,27 +53,28 @@ export class PipesComponent {
   discountedPrice: number = 1200;
 
 
-  // I18nPluralPipe Example
-  items = ['apple', 'banana', 'cherry'];
+  items = ['Apple', 'samsung', 'Nokia'];
   itemsMap = {
     '=0': 'No items',
     '=1': 'One item',
     '=2': 'Two items',
-    'other': '# items'
+    'other': '# items',
+
   };
 
   // I18nSelectPipe
-  userRole = 'admin';
-  roleMap = {
+  userRole = 'Administrator';
+  role = {
     'admin': 'Administrator',
     'user': 'Standard User',
     'guest': 'Guest User'
   };
 
-  // KeyValuePipe Example
   userDetails = {
-    name: 'John Doe',
-    email: 'john@example.com',
+    name: 'Brindha',
+    email: 'brindha@gmail.com',
     age: 30
   };
+
+
 }
