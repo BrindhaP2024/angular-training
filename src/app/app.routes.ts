@@ -1,3 +1,5 @@
+import { ReactiveDrivenComponent } from './../reactive-driven/reactive-driven.component';
+import { TdfFormComponent } from './tdf-form/tdf-form.component';
 import { Routes } from '@angular/router';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
@@ -15,6 +17,7 @@ import { TemplatereferenceComponent } from './templates/templatereference/templa
 import { NgContainerExampleComponent } from './templates/ng-container-example/ng-container-example.component';
 import { EventComponent } from './templates/event/event.component';
 import { ServiceusageComponent } from './serviceusage/serviceusage.component';
+import { RdfComponent } from './rdf/rdf.component';
 
 export const routes: Routes = [
   {
@@ -90,6 +93,15 @@ export const routes: Routes = [
   {path:'service-usage',
    component:ServiceusageComponent
   },
+  {path:'tdf',
+    component:TdfFormComponent
+  },
+  {path:'rdf',
+    component:ReactiveDrivenComponent
+  },
+ { path:'rdf1',
+  component:RdfComponent
+ },
   {
     path: '**',
     component: NotFoundComponent,

@@ -12,9 +12,7 @@ import { ExampleComponent } from './templates/example/example.component';
 import { DomManipulationsComponent } from './dom-manipulations/dom-manipulations.component';
 import { UserService } from './user.service';
 import { LogService } from './log.service';
-import { TdfFormComponent } from "./tdf-form/tdf-form.component";
-import { RdfComponent } from "./rdf/rdf.component";
-import { ReactiveFormComponent } from "./reactive-driven/reactive-driven.component";
+
 
 @Component({
   selector: 'app-root',
@@ -32,9 +30,7 @@ import { ReactiveFormComponent } from "./reactive-driven/reactive-driven.compone
     TemplateVariableComponent,
     ExampleComponent,
     DomManipulationsComponent,
-    TdfFormComponent,
-    RdfComponent,
-    ReactiveFormComponent
+
 ],
   templateUrl: './app.component.html',
   styles: [
