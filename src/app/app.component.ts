@@ -12,6 +12,10 @@ import { ExampleComponent } from './templates/example/example.component';
 import { DomManipulationsComponent } from './dom-manipulations/dom-manipulations.component';
 import { UserService } from './user.service';
 import { LogService } from './log.service';
+import { InterceptorComponent } from "./interceptor/interceptor.component";
+import { TechServiceComponent } from "./tech-service/tech-service.component";
+import { InputDataDecoratorComponent } from "./input-data-decorator/input-data-decorator.component";
+import { OutputDataComponent } from "./output-data/output-data.component";
 
 
 @Component({
@@ -30,7 +34,9 @@ import { LogService } from './log.service';
     TemplateVariableComponent,
     ExampleComponent,
     DomManipulationsComponent,
-
+    TechServiceComponent,
+  
+    OutputDataComponent
 ],
   templateUrl: './app.component.html',
   styles: [
@@ -71,7 +77,7 @@ import { LogService } from './log.service';
       h2 {
         margin: 1rem;
         font-size: 1.5rem;
-        color: #1e293b;
+        color:rgb(93, 118, 159);
       }
     `
   ]
