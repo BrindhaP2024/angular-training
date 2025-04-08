@@ -1,6 +1,6 @@
-<h2>Tech list</h2>
+<h2>Posts</h2>
 <ul>
-  <ol type="1" *ngFor="let tech of service">
-    {{ tech }}
-</ol>
+  <li *ngFor="let post of posts">
+    {{ post.id }}. {{ post.title }} by {{ post.author }}
+  </li>
 </ul>
