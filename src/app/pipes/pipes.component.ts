@@ -31,7 +31,7 @@ import { delay, Observable, of } from 'rxjs';
 })
 export class PipesComponent {
 
-  usersObs: Observable<string[]> = of(['HTML', 'CSS', 'JS','ANGULAR','NODE JS','EXPRESS JS']).pipe(delay(1000));
+  usersObs: Observable<string[]> = of(['HTML', 'CSS', 'JS','ANGULAR','NODE JS','EXPRESS JS']);
 
   text = 'Pipes Example';
   price = 140.0545;

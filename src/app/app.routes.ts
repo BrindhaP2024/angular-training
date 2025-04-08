@@ -14,6 +14,7 @@ import { AdvControlFlowComponent } from './templates/adv-control-flow/adv-contro
 import { TemplatereferenceComponent } from './templates/templatereference/templatereference.component';
 import { NgContainerExampleComponent } from './templates/ng-container-example/ng-container-example.component';
 import { EventComponent } from './templates/event/event.component';
+import { ServiceusageComponent } from './serviceusage/serviceusage.component';
 
 export const routes: Routes = [
   {
@@ -85,6 +86,9 @@ export const routes: Routes = [
     path: 'ng-container',
     component: NgContainerExampleComponent,
     title: 'NgContainer Example'
+  },
+  {path:'service-usage',
+   component:ServiceusageComponent
   },
   {
     path: '**',

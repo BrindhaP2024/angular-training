@@ -11,11 +11,15 @@
   <a routerLink="/adv-control-flow">Adv control flow</a>
   <a routerLink="/template-ref">Template refs</a>
   <a routerLink="/ng-container">Container</a>
+  <a routerLink = "/service-usage" routerLinkActive="active">Service usage</a>
+  <a routerLink="/tdf">Tdf form</a>
+  <a routerLink="/rdf1">RDF Form</a>
 </nav>
 <router-outlet></router-outlet>
 
-<hr>
 
+<hr>
+<!-- <app-serviceusage></app-serviceusage> -->
 <app-ng-content>
   <h2 header>Custom Header sets here</h2>
   <p body>Body content passed via ng-content</p>
@@ -49,9 +53,22 @@
   </div>
 } @error {
   <div>
-    <h3>Oops! Failed to load Home Component.</h3>
+    <h3>Failed to load Home Component.</h3>
   </div>
 }
 
 
 <app-template-variable></app-template-variable>
+<app-example></app-example>
+
+<app-dom-manipulations></app-dom-manipulations>
+<h3>Temlate driven Form</h3>
+<app-tdf-form></app-tdf-form>
+<br>
+<hr/>
+<h3>Reactive driven forms</h3>
+<br>
+<hr/>
+<app-rdf></app-rdf>
+
+<app-reactive-form></app-reactive-form>
