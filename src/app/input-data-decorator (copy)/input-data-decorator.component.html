@@ -1,0 +1,7 @@
+<div class="product-card">
+  <h2>{{ name }}</h2>
+  <p>Price: ${{ price ? price.toFixed(2) : '0.00' }}</p>
+  <p>{{ description }}</p>
+  <p>Status: {{ isAvailable ? 'In Stock' : 'Out of Stock' }}</p>
+</div>
+<button (click)="toggle()">Toggle</button>

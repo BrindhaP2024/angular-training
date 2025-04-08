@@ -1,0 +1,25 @@
+<p>Output Data works!</p>
+
+<app-input-data-decorator
+  [name]="'Laptop'"
+  [price]="90000.99"
+  [description]="'High-performance laptop'"
+  [isAvailable]="true"
+  (toggled)="onToggle($event)"
+  (stateChanged)="onStateChange($event)">
+</app-input-data-decorator>
+
+<app-input-data-decorator
+  [name]="'Smartphone'"
+  [price]="57900.99"
+  [description]="'Latest model with 5G support'"
+  (toggled)="onToggle($event)"
+  (stateChanged)="onStateChange($event)">
+</app-input-data-decorator>
+
+<app-input-data-decorator
+  [name]="'Tablet'"
+  [price]="29000.99"
+  (toggled)="onToggle($event)"
+  (stateChanged)="onStateChange($event)">
+</app-input-data-decorator>
