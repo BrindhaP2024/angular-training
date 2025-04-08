@@ -1,0 +1,6 @@
+<!-- app.component.html -->
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+  <input type="text" name="username" [(ngModel)]="username" required />
+  <input type="email" name="email" [(ngModel)]="email" />
+  <button type="submit">Submit</button>
+</form>
