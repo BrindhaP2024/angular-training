@@ -1,0 +1,17 @@
+.app-class-selector {
+    color: blue;
+  }
+  
+  [app-attribute-selector] {
+    color: green;
+  }
+  
+  app-element-selector p {
+    color: red;
+  }
+  
+  app-composite-selector p,
+  [app-composite-selector] p,
+  .app-composite-selector p {
+    color: purple;
+  }

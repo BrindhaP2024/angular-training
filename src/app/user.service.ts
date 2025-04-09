@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  user = { name: '', isAuthorized: true };
+  user = { name: 'Brindha', isAuthorized: true };
 
   private users = [
     { id: 1, name: 'Brindha', email: 'Brindha@gmail.com' },
