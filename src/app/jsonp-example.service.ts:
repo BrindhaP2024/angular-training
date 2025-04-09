@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+import { JsonpClientBackend } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class JsonpExampleService {
+  constructor(private jsonpBackend: JsonpClientBackend) {}
+
+  fetchData(url: string): void {
+    this.jsonpBackend
+      .handle({ method: 'JSONP', url, body: null })
+      .subscribe((data) => console.log('JSONP Response:', data));
+  }
+}
