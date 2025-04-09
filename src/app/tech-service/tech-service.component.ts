@@ -1,8 +1,12 @@
 import { PostService } from './../post.service';
 import { Component,OnInit } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
-import { Post } from '../post.model';
-
+// import { Post } from '../post.model';
+interface Post{
+  id:number,
+  title:String,
+  author:String
+}
 @Component({
   selector: 'app-tech-service',
   standalone:true,

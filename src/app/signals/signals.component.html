@@ -1,0 +1,9 @@
+<input type="text" placeholder="Enter your name"
+       (input)="updateName($event)" />
+
+<input type="number" placeholder="Enter the value"
+       (input)="updateMark($event)" />
+
+<h4>Name is updated to: {{ name() }} and secured {{ mark() }} </h4>
+<app-adv-signal></app-adv-signal>
+<app-resource-signal></app-resource-signal>

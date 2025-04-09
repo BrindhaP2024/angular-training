@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Introduction to Angular"
+    },
+    {
+      "id": 2,
+      "title": "Understanding Reactive Forms"
+    },
+    {
+      "id": 3,
+      "title": "Template-driven Forms in Depth"
+    },
+    {
+      "id": 4,
+      "title": "Angular 17 New Features"
+    }
+  ]
+}
