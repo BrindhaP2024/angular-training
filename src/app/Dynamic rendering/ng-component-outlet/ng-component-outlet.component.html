@@ -1,0 +1,7 @@
+<p>ng-component-outlet works!</p>
+<!-- <p>Profile for {{ user.name }}</p> -->
+<!-- <ng-container *ngComponentOutlet="getBioComponent()"></ng-container> -->
+ <div>
+    <app-admin-bio *ngIf="isAdmin"></app-admin-bio>
+    <app-standard-bio *ngIf="!isAdmin"></app-standard-bio>
+ </div>

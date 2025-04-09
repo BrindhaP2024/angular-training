@@ -6,16 +6,18 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { TwoWayBindingComponent } from './templates/two-way-binding/two-way-binding.component';
 import { NgContentComponent } from './templates/ng-content/ng-content.component';
-import { MultiplyPipe } from './multiply.pipe';
 import { TemplateVariableComponent } from './templates/template-variable/template-variable.component';
 import { ExampleComponent } from './templates/example/example.component';
 // import { DomManipulationsComponent } from './dom-manipulations/dom-manipulations.component';
 import { UserService } from './user.service';
 // import { LogService } from './log.service';
 // import { InterceptorComponent } from "./interceptor/interceptor.component";
+import { LogService } from './log.service';
 import { TechServiceComponent } from "./tech-service/tech-service.component";
+import { DomManipulationsComponent } from "./dom-manipulations/dom-manipulations.component";
+import { ReactiveFormComponent } from "./reactive-driven/reactive-driven.component";
 // import { InputDataDecoratorComponent } from "./input-data-decorator/input-data-decorator.component";
-import { OutputDataComponent } from "./output-data/output-data.component";
+// import { OutputDataComponent } from "./output-data/output-data.component";
 
 
 @Component({
@@ -29,13 +31,11 @@ import { OutputDataComponent } from "./output-data/output-data.component";
     CommonModule,
     TwoWayBindingComponent,
     NgContentComponent,
-    MultiplyPipe,
     HomeComponent,
     TemplateVariableComponent,
     ExampleComponent,
-,
-
-    OutputDataComponent
+    DomManipulationsComponent,
+    ReactiveFormComponent
 ],
   templateUrl: './app.component.html',
   styles: [
