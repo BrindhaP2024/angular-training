@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InputDataDecoratorComponent } from "../input-data-decorator/input-data-decorator.component";
+import { InputDataDecoratorComponent } from '../input-data-decorator (copy)/input-data-decorator.component';
 
 @Component({
   selector: 'app-output-data',
