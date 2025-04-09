@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TemplatereferenceComponent } from '../templates/templatereference/templatereference.component';
+import { ServiceusageComponent } from "../serviceusage/serviceusage.component";
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [TemplatereferenceComponent, ServiceusageComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  @ViewChild(TemplatereferenceComponent) child!: TemplatereferenceComponent;
 
+  callGreetingTemplate() {
+    this.child.showTemplate('greeting');
+  }
+
+  callFarewellTemplate() {
+    this.child.showTemplate('farewell');
+  }
 }

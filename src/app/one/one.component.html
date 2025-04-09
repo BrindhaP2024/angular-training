@@ -1,5 +1,20 @@
 <p>one works!</p>
-<a routerLink = '/home' routerLinkActive ="active" ariaCurrentWhenActive="page">Home</a>
-<a routerLink='/about' routerLinkActive="active">About</a>
+<nav>
+  <!-- <li>
+    <ul routerLinkActive="nav-item-active" [routerLinkActiveOptions]="{ exact: true }">
+      <li><a routerLink="/one/home">Home</a></li>
+     <li><a routerLink="/one/about">About</a></li> -->
+    <!-- </ul> -->
 
-<router-outlet/>
+    <!-- <a routerLink='/one/about' routerLinkActive="inactive" ariaCurrentWhenActive="page" >About</a> -->
+  <!-- </li> -->
+<!-- </nav> -->
+
+<ul
+  routerLinkActive="nav-item-active"[routerLinkActiveOptions]="{ exact: true }"
+>
+  <li><a routerLink="/one/home">Home</a></li>
+  <li><a routerLink="/one/about">About</a></li>
+</ul>
+<router-outlet>
+

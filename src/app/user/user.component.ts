@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute,RouterLink, RouterLinkActive} from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user',
   imports: [RouterLink],
+  providers:[UserService],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
