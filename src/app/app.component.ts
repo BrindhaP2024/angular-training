@@ -1,28 +1,22 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { LogService } from './log.service';
+import { UserService } from './user.service';
 import { HomeComponent } from './home/home.component';
 import { TwoWayBindingComponent } from './templates/two-way-binding/two-way-binding.component';
 import { NgContentComponent } from './templates/ng-content/ng-content.component';
 import { MultiplyPipe } from './multiply.pipe';
 import { TemplateVariableComponent } from './templates/template-variable/template-variable.component';
 import { ExampleComponent } from './templates/example/example.component';
-// import { DomManipulationsComponent } from './dom-manipulations/dom-manipulations.component';
-import { UserService } from './user.service';
-// import { LogService } from './log.service';
-// import { InterceptorComponent } from "./interceptor/interceptor.component";
 import { TechServiceComponent } from "./tech-service/tech-service.component";
-// import { InputDataDecoratorComponent } from "./input-data-decorator/input-data-decorator.component";
-import { OutputDataComponent } from "./output-data/output-data.component";
-
 
 @Component({
   selector: 'app-root',
   preserveWhitespaces: true,
   imports: [
-    RouterOutlet,
+
     RouterLink,
     RouterLinkActive,
     FormsModule,
@@ -33,10 +27,8 @@ import { OutputDataComponent } from "./output-data/output-data.component";
     HomeComponent,
     TemplateVariableComponent,
     ExampleComponent,
-,
-
-    OutputDataComponent
-],
+    TechServiceComponent
+  ],
   templateUrl: './app.component.html',
   styles: [
     `
@@ -78,8 +70,8 @@ import { OutputDataComponent } from "./output-data/output-data.component";
         font-size: 1.5rem;
         color:rgb(93, 118, 159);
       }
-    `
-  ]
+    `,
+  ],
 })
 export class AppComponent {
   private logger = inject(LogService);
@@ -88,6 +80,8 @@ export class AppComponent {
   title = 'angular_training';
   userRating = 3;
   showHomeComponent = false;
+  deferredPrompt: any;
+  isInstalled = false;
 
   constructor() {
     this.logger.log(`User: ${this.userService?.user?.name || 'Name not provided'}`);
@@ -95,5 +89,20 @@ export class AppComponent {
 
   toggleHomeComponent() {
     this.showHomeComponent = !this.showHomeComponent;
+  }
+
+  @HostListener('window:beforeinstallprompt', ['$event'])
+  onBeforeInstallPrompt(event: Event) {
+    event.preventDefault();
+    this.deferredPrompt = event as any;
+  }
+
+  async installPWA() {
+    if (this.deferredPrompt) {
+      this.deferredPrompt.prompt();
+      const choiceResult = await this.deferredPrompt.userChoice;
+      this.isInstalled = choiceResult.outcome === 'accepted';
+      this.deferredPrompt = null;
+    }
   }
 }

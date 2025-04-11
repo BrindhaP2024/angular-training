@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:ssr": "ng build && ng run angular_training:server",
+    "serve:ssr": "node dist/angular_training-server/main.js",
+    "dev:ssr": "ng run angular_training:serve-ssr"
   },
   "private": true,
   "dependencies": {
