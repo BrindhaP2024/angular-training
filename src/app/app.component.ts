@@ -10,14 +10,13 @@ import { NgContentComponent } from './templates/ng-content/ng-content.component'
 import { MultiplyPipe } from './multiply.pipe';
 import { TemplateVariableComponent } from './templates/template-variable/template-variable.component';
 import { ExampleComponent } from './templates/example/example.component';
-// import { OutputDataComponent } from "./output-data/output-data.component";
 import { TechServiceComponent } from "./tech-service/tech-service.component";
 
 @Component({
   selector: 'app-root',
   preserveWhitespaces: true,
   imports: [
-    RouterOutlet,
+
     RouterLink,
     RouterLinkActive,
     FormsModule,
@@ -71,8 +70,8 @@ import { TechServiceComponent } from "./tech-service/tech-service.component";
         font-size: 1.5rem;
         color:rgb(93, 118, 159);
       }
-    `
-  ]
+    `,
+  ],
 })
 export class AppComponent {
   private logger = inject(LogService);

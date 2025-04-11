@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "999",
+      "name": "Computer",
+      "price": 3
+    },
+    {
+      "id": "270",
+      "name": "Adding",
+      "price": 22
+    },
+    {
+      "id": "848",
+      "name": "Health care",
+      "price": 20
+    },
+    {
+      "id": "438",
+      "name": "Apple",
+      "price": 230
+    },
+    {
+      "id": "775",
+      "name": "HEkkkp",
+      "price": 23
+    },
+    {
+      "id": "981",
+      "name": "mobile",
+      "price": 23
+    },
+    {
+      "id": "296",
+      "name": "54454",
+      "price": 5
+    },
+    {
+      "id": "640",
+      "name": "Mobile phones",
+      "price": 33
+    }
+  ]
+}
