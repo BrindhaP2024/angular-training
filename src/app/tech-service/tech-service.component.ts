@@ -1,7 +1,7 @@
 import { PostService } from './../post.service';
 import { Component,OnInit } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
-import { Post } from '../post.model';
+// import { Post } from '../post.model';
 
 @Component({
   selector: 'app-tech-service',
@@ -12,7 +12,7 @@ import { Post } from '../post.model';
   styleUrl: './tech-service.component.css'
 })
 export class TechServiceComponent {
-  posts :Post[] =[];
+  posts =[];
 
   constructor(private PostService: PostService) {}
 

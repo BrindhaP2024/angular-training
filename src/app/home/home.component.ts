@@ -1,10 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { TemplatereferenceComponent } from '../templates/templatereference/templatereference.component';
-import { ServiceusageComponent } from "../serviceusage/serviceusage.component";
+
 
 @Component({
   selector: 'app-home',
-  imports: [TemplatereferenceComponent, ServiceusageComponent],
+  imports: [TemplatereferenceComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
