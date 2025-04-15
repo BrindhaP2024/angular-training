@@ -1,0 +1,8 @@
+<div >
+  <h3>User data</h3>
+  <p *ngIf="userResource.isLoading()">Loading</p>
+  <p *ngIf="userResource.error()">Error in Loading the user data :{{userResource.error()}}</p>
+  <p *ngIf ="userResource.value()">Name:{{userResource.value()?.name}}</p>
+  <button (click)="reloadUser()">Reload</button>
+  <button (click)="prevUser()">Previous User</button>
+  <button (click)="nextUser()">Next User</button>

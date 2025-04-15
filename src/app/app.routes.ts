@@ -15,7 +15,7 @@ import { AdvControlFlowComponent } from './templates/adv-control-flow/adv-contro
 import { TemplatereferenceComponent } from './templates/templatereference/templatereference.component';
 import { NgContainerExampleComponent } from './templates/ng-container-example/ng-container-example.component';
 import { EventComponent } from './templates/event/event.component';
-import { ServiceusageComponent } from './serviceusage/serviceusage.component';
+// import { ServiceusageComponent } from './serviceusage/serviceusage.component';
 // import { RdfComponent } from './rdf/rdf.component';
 
 export const routes: Routes = [
@@ -89,18 +89,10 @@ export const routes: Routes = [
     component: NgContainerExampleComponent,
     title: 'NgContainer Example'
   },
-  {path:'service-usage',
-   component:ServiceusageComponent
-  },
-//   {path:'tdf',
-//     // component:TdfFormComponent
-//   },
-//   {path:'rdf',
-//     // component:ReactiveDrivenComponent
-//   },
-//  { path:'rdf1',
-//   // component:RdfComponent
-//  },
+  // {path:'service-usage',
+  //  component:ServiceusageComponent
+  // },
+
   {
     path: '**',
     component: NotFoundComponent,
