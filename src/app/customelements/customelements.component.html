@@ -1,0 +1,18 @@
+
+<div class="row">
+  <input type="number" [(ngModel)]="number1" placeholder="Number 1" />
+  <input type="number" [(ngModel)]="number2" placeholder="Number 2" />
+</div>
+<div class="row">
+  <button (click)="add()">Add</button>
+  <button (click)="subtract()">Subtract</button>
+  <button (click)="multiply()">Multiply</button>
+  <button (click)="divide()">Divide</button>
+</div>
+<p>Result: {{ result }}</p>
+
+<div class="user-card">
+  <h3>{{ name }}</h3>
+  <p>Email: {{ email }}</p>
+  <p>Role: {{ role }}</p>
+</div>
